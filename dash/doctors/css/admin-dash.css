@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Sansita+Swashed:wght@600;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background: url(../bgg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    backface-visibility: visible;
+   
+}
+
+.container{
+    
+    /* border: 2px solid black; */
+color: black;
+position: absolute;
+top: 25%;
+left: 20%;
+font-family: default;
+font-family: Arial, Helvetica, sans-serif;
+}
+.container p{
+    display: inline-block;
+    font-size: 33px;
+    /* border-bottom: 5px solid rgb(14, 77, 77); */
+    margin: 9px 41px;
+    padding: 13px;
+    font-family: fantasy; 
+    /* border: 2px solid black; */
+
+
+
+}
+.username{
+    font-size: 23px;
+    width: 100%;
+    margin: 15px 20px;
+    padding: 10px 30px;
+    font-family: fantasy; 
+}
+.password{
+    font-size: 24px;
+    width: 100%;
+    margin: 12px 26px;
+    padding: 11px 22px;
+    font-family: fantasy 
+}
+
+
+input[type=submit]{
+    opacity: 0.8;
+
+    border: 2px solid black;
+    font-size: 23px;
+    font-family: fantasy;
+    background-color: rgb(25, 96, 202);
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    width: 29%;
+    margin: 20px 41px;
+  
+}
+input[type=submit]:hover{
+    background-color: cadetblue;
+}
+input[type=button]{
+    cursor: pointer;
+    font-family: fantasy;
+    opacity: 0.8;
+    position: absolute;
+    top: 53%;
+    left: 5%;
+    padding: 10px 20px;
+    font-size: 23px;
+    margin-left: 28%;
+    background-color: rgb(25, 96, 202);
+    border: 2px solid;
+    border-radius: 12px;
+}
+input[type=button]:hover{
+    background-color: cadetblue;
+}
+
+
