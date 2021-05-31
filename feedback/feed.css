@@ -26,5 +26,21 @@ input[type=submit]:hover {
 }
 
 
+<form action="feedback.php" method="POST">
+    <h1> Patients FeedBack</h1>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="email">Email</label>
+    <input type="text"  name="email" placeholder="Email..">
+
+
+    <label for="subject">Feedback</label>
+    <textarea id="subject" name="feedback" placeholder="Give Your Honest Feedback plz..." style="height:200px"></textarea>
+
+    <input type="submit" name="submit">
+  </form>
 

@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 
@@ -7,88 +5,101 @@ include '../../header.php';
 include '../../login/config.php';
 ?>
 <style>
-li{
-  float: right;
-}
-  </style>
+  li {
+    float: right;
+  }
+</style>
 
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Patient Dashboard</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Dashboard</title>
+</head>
+
+<body>
 
 
-    <!-- Side nav  -->
+  <!-- Side nav  -->
 
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-2" style="margin-left:-30px;">
-            <!--  Side nav bar php -->
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #17a2b8;
-  width: 699%;
-    height: 80px;
-}
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-2" style="margin-left:-30px;">
+        <!--  Side nav bar php -->
+        <style>
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #47c128;
+            width: 699%;
+            height: 80px;
+          }
 
-li {
-  float: left;
-}
+          li {
+            float: left;
+          }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-a{
-  color:white;
-}
-li a:hover {
-  background-color: #111;
-}
-</style>
+          li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
 
+          a {
+            color: white;
+          }
 
-<ul>
-<h1 style="margin-top:30px; font-size: 35px;"> <b>  Admin Dashboard  </b></h1>
-<p style="position: absolute;top: 13px;left: 500%;text-align: right;width: 79px;margin-top:31px"> <b>  <a href="admin-dash.php"> Admin </a></b>  </p>
-<p style="position: absolute;top: 13px;left: 540%;text-align: right;width: 79px;margin-top:31px"> <b> <a href="../patient/patient-dash.php">  Patients  </a>  </b>  </p>
-<p style="position: absolute;top: 13px;left: 580%;text-align: right;width: 79px;margin-top:31px; background-color:red;"> <b> <a href="../doctors/doctor-dash.php">  Doctors  </a></b>  </p>
-</ul>
+          li a:hover {
+            background-color: #111;
+          }
+        </style>
 
 
-<!-- End Of nav var -->
+        <ul>
+          <h1 style="margin-top:14px; margin-left:20px; font-size: 40px; font-family:system-ui"> <b> <i
+                class="fa fa-user" aria-hidden="true"> Patients Dashboard </i> </b></h1>
+          <button class="btn btn-info"
+            style="position: absolute;top: -10px;left: 500%;text-align: right;width: 79px;margin-top:31px;  background-color:red;">
+            <a href="../admin/admin-dash.php" style="color:white;"> Admin </a></button>
+          <button class="btn btn-info"
+            style="position: absolute;top: -10px;left: 544%;text-align: right;width: 79px;margin-top:31px;  background-color:blue;">
+            <a href="../patient/patient-dash.php" style="color:white;"> Patients </a></button>
+          <button class="btn btn-info"
+            style="position: absolute;top: -10px;left: 584%;text-align: right;width: 79px;margin-top:31px;  background-color:green;">
+            <a href="add-doct.php" style="color:white;"> Doctors </a></button>
+
+
+        </ul>
+
+
+        <!-- End Of nav var -->
 
 
 
-                <div class="list-group bg-info" style="height:90vh;">
-                 <a href="doctor-dash.php" class="list-group-item list-group-item-action
+        <div class="list-group bg-info" style="height:90vh;">
+          <a href="doctor-dash.php" class="list-group-item list-group-item-action
                  bg-info text-center text-white"> Dashboard</a>
-                 <a href="doctors.php" class="list-group-item list-group-item-action
+          <a href="doctors.php" class="list-group-item list-group-item-action
                  bg-info text-center text-white"> Doctors </a>
-                 <a href="add-doct.php" class="list-group-item list-group-item-action
+          <a href="add-doct.php" class="list-group-item list-group-item-action
                  bg-info text-center text-white"> Add Doctors </a>
 
 
-                </div>
-                <!-- ends -->
-          </div>
+        </div>
+        <!-- ends -->
+      </div>
 
 
-<!-- PHP CODE -->
-<?php
+      <!-- PHP CODE -->
+      <?php
 
 session_start();
 
@@ -101,10 +112,9 @@ if (isset($_POST['apply'])) {
     $day = $_POST['day'];
     $time = $_POST['time'];
     $room = $_POST['room'];
-    $image = $_POST['image'];
 
-    $query = "INSERT INTO doctor(name,department,gender,phone,day,time,room,image)
-        VALUES ('$name','$department','$gender','$phone','$day','$time','$room','$image' )";
+    $query = "INSERT INTO doctor(name,department,gender,phone,day,time,room)
+        VALUES ('$name','$department','$gender','$phone','$day','$time','$room' )";
 
     $result = mysqli_query($connect, $query);
     if ($result) {
@@ -113,7 +123,7 @@ if (isset($_POST['apply'])) {
         header("location:viewapp.php");
 
     } else {
-        echo " <script>  alert('failed') </script>";
+        echo " <script>  alert('failed')</script>";
 
     }
 
@@ -130,97 +140,98 @@ if (isset($error['apply'])) {
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+      <!DOCTYPE html>
+      <html lang="en">
 
-<?php
+      <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+      </head>
+
+      <body>
+
+        <?php
 include_once '../../header.php';
 ?>
 
-<div class="container">
-    <div class="col-md-12" style="POSITION: ABSOLUTE;
+        <div class="container">
+          <div class="col-md-12" style="POSITION: ABSOLUTE;
     top: 130px;right:60px; width:80%;">
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 my-3 jumbotron">
+            <div class="row">
+
+              <div class="col-sm-6 my-3 ">
                 <h5 class="text-center">ADD DOCTORS </h5>
                 <div>
-                     <?php
+                  <?php
 echo $show;
 ?>
-                 </div>
-                 <form method="post" action="add-doct.php">
-                     <div class="form-group">
-                         <label>Doctors  Name </label>
-                           <input type="text"  name="name" class="form-control"
-                           auto-complete="off" placeholder="Enter Doctors Name">
+                </div>
+                <form method="post" action="add-doct.php">
+                  <div class="display" style="display:flex;">
+                    <div class="form-group">
+                      <label>Doctors Name </label>
+                      <input type="text" name="name" class="form-control" auto-complete="off"
+                        placeholder="Enter Doctors Name">
+                    </div>
 
-                     </div>
+                    <div class="form-group">
+                      <label> department </label>
+                      <input type="text" name="department" class="form-control" auto-complete="off"
+                        placeholder="Enter Department">
+                    </div>
+                    <div class="form-group">
+                      <label> Select Gender</label>
+                      <select name="gender" id="" class="form-control">
+                        <option value="" class="value"> Select Gender</option>
+                        <option value="male" class="male"> Male</option>
+                        <option value="female" class="female">Female</option>
+                        <option value="others" class="Others">Others</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label> Phone Number
+                      <input type="phone" name="phone" class="form-control" auto-complete="off"
+                        placeholder="enter Your Phone  number">
+                    </label>
+                  </div>
 
-                     <div class="form-group">
-                         <label> department </label>
-                           <input type="text"  name="department" class="form-control"
-                           auto-complete="off" placeholder="Enter Department">
-
-                     <div class="form-group">
-                         <label>  Select Gender</label>
-                           <select name="gender" id="" class="form-control">
-                               <option value="" class="value"> Select Gender</option>
-                               <option value="male" class="male"> Male</option>
-                               <option value="female" class="female">Female</option>
-                               <option value="others" class="Others">Others</option>
-                           </select>
-                     </div>
-
-                     <div class="form-group">
-                         <label> Phone Number
-                           <input type="phone"  name="phone" class="form-control"
-                           auto-complete="off" placeholder="enter Your Phone  number">
-                         </label>
-                     </div>
-                     <div class="form-group">
-                         <label> Weekly day
-                           <input type="text"  name="day" class="form-control"
-                           auto-complete="off" placeholder="Day">
-                         </label>
-                     </div>
-                     <div class="form-group">
-                         <label> Doctor Timing</label>
-                         <input type="password" name="time" class="form-control"
-                         auto-complete="off" placeholder="">
-                     </div>
-
-                     <div class="form-group">
-                         <label> Doctors Room </label>
-                         <input type="password" name="room" class="form-control"
-                         auto-complete="off" placeholder="Doctors Room">
-                     </div>
-
-                     <div class="form-group">
-                         <label> image</label>
-                         <input type="password" name="image" class="form-control"
-                         auto-complete="off" placeholder="Images">
-                     </div>
-
-                      <a href="viewapp.php">
-                     <input type="submit" name="apply" value="apply now" class="btn  btn-primary">
-                     </a>
-                     <p> already have account <a href=".php"> click here </a> <p>
+                  <div class="form-group">
+                    <label> Weekly day
+                      <input type="text" name="day" class="form-control" auto-complete="off" placeholder="Day">
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label> Doctor Timing</label>
+                    <input type="password" name="time" class="form-control" auto-complete="off" placeholder="">
+                  </div>
 
 
-                 </form>
+
+
+                  <div class="form-group">
+                    <label> Doctors Room </label>
+                    <input type="password" name="room" class="form-control" auto-complete="off"
+                      placeholder="Doctors Room">
+                  </div>
+
+
+
+                  <a href="viewapp.php">
+                    <input type="submit" name="apply" value="Add" class="btn  btn-primary">
+                  </a>
+
+
+              </div>
+
+              </form>
             </div>
             <div class="col-md-3"></div>
+          </div>
         </div>
     </div>
-</div>
 
 
 
@@ -234,6 +245,7 @@ echo $show;
 
 
 </body>
+
 </html>
 
 
@@ -266,7 +278,8 @@ if (count($error) == 0) {
 
 
 
-      </div>
-    </div>
-  </body>
+</div>
+</div>
+</body>
+
 </html>

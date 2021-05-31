@@ -30,14 +30,14 @@ li{
             <!--  Side nav bar php -->
 <style>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #17a2b8;
-  width: 699%;
-    height: 80px;
-}
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:#47c128;
+        width: 699%;
+        height: 80px;
+      }
 
 li {
   float: left;
@@ -61,11 +61,13 @@ li a:hover {
 
 
 <ul>
-<h1 style="margin-top:30px; font-size: 35px;"> <b>  Admin Dashboard  </b></h1>
-<p style="position: absolute;top: 13px;left: 500%;text-align: right;width: 79px;margin-top:31px"> <b>  <a href="../admin/admin-dash.php"> Admin </a></b>  </p>
-<p style="position: absolute;top: 13px;left: 540%;text-align: right;width: 79px;margin-top:31px"> <b> <a href="../patient/patient-dash.php">  Patients  </a>  </b>  </p>
-<p style="position: absolute;top: 13px;left: 580%;text-align: right;width: 79px;margin-top:31px; background-color:red"> <b> <a href="../doctors/doctor-dash.php">  Doctors  </a></b>  </p>
-</ul>
+      <h1 style="margin-top:14px; margin-left:20px; font-size: 40px; font-family:system-ui"> <b> <i class="fa fa-user" aria-hidden="true"> Doctors Dashboard </i> </b></h1>
+      <button class="btn btn-info" style="position: absolute;top: -10px;left: 500%;text-align: right;width: 79px;margin-top:31px;  background-color:red;"> <a href="admin-dash.php" style="color:white;"> Admin </a></button>
+      <button class="btn btn-info" style="position: absolute;top: -10px;left: 544%;text-align: right;width: 79px;margin-top:31px;  background-color:blue;"> <a href="../patient/patient-dash.php" style="color:white;"> Patients </a></button>
+      <button class="btn btn-info" style="position: absolute;top: -10px;left: 584%;text-align: right;width: 79px;margin-top:31px;  background-color:green;"> <a href="doct-dash.php" style="color:white;"> Doctors </a></button>
+
+
+    </ul>
 
 
 <!-- End Of nav var -->

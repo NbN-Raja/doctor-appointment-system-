@@ -33,15 +33,15 @@ li{
           <div class="col-md-2" style="margin-left:-30px;">
             <!--  Side nav bar php -->
 <style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #17a2b8;
-  width: 699%;
-    height: 80px;
-}
+ ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:#47c128;
+        width: 699%;
+        height: 80px;
+      }
 
 li {
   float: left;
@@ -64,30 +64,15 @@ li a:hover {
 
 <ul>
 <div class="nav" style="display:flex; justify-content:space-between; align-item:center;">
-<h1 style="margin-top:30px; font-size: 35px; font-family: 'Poppins', sans-serif;"> <b>  Dashboard  </b></h1>
-<div class="logout">
-<i class="fas fa-sign-out-alt"> log Out</i>
+<h1 style="margin-top:14px; margin-left:40%; font-size: 40px; font-family:system-ui"> <b> <i class="fa fa-user" aria-hidden="true">  Dashboard </i> </b></h1>
 
+<div class="logout" >
+  <button class="btn btn-red"><i class="fas fa-sign-out-alt" style="position: relative;top: 31px;left: -22px;"> log Out</i> <button>
 </div>
 </div>
 
 
 </ul>
-
- <div class="list-group bg-info" style="height:90vh;">
-
-                 <a href="#" class="list-group-item list-group-item-action
-                 bg-info text-center text-white"> Admin</a>
-
-                 <a href="#" class="list-group-item list-group-item-action
-                 bg-info text-center text-white"> Patients</a>
-
-                 <a href="#" class="list-group-item list-group-item-action
-                 bg-info text-center text-white"> Doctors</a>
-
-
-                </div>
-                <!-- ends -->
 
 
  </body>
@@ -103,7 +88,7 @@ li a:hover {
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 
-<section class="text-gray-600 body-font" style="width:85%">
+<section class="text-gray-600 body-font" style="width:100%">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="p-4 lg:w-1/3">

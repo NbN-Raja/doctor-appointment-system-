@@ -58,11 +58,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
               </ul>
             </div>
             <div class="col-sm-2 d-none d-lg-block appoint">
-              <label for="buttom">
-                <a href="../login/login.php">
-              </label>
-              <!-- <button class="btn btn-info">Login/Signup</button> -->
-              <a href="../front/index.php" class="btn btn-danger">Sign Out of Your Account</a>
+
             </div>
           </div>
         </div>

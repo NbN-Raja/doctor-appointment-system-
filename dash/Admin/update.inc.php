@@ -5,13 +5,10 @@ include_once "../../login/config.php";
 if (isset($_POST['up'])) {
     $idd = $_POST['id'];
     $first = $_POST['firstname'];
-    $middle = $_POST['middlename'];
-    $last = $_POST['lastname'];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
     $blood = $_POST['blood'];
     $address = $_POST['address'];
-    $city = $_POST['city'];
     $phone = $_POST['phone'];
     $department = $_POST['department'];
     $doctors = $_POST['doctors'];
@@ -19,9 +16,9 @@ if (isset($_POST['up'])) {
     $email = $_POST['email'];
     $reason = $_POST['reason'];
 
-    $up = "UPDATE `appointment` SET `firstname` = '$first', `middlename` = '$middle', `lastname` = '$last',
+    $up = "UPDATE `appointment` SET `firstname` = '$first',
      `gender` = '$gender',`age` = '$age',`blood` = '$blood',
-     `address` = '$address',`city` = '$city',`phone` = '$phone',
+     `address` = '$address',`phone` = '$phone',
      `department` = '$department',`doctors` = '$doctors',`date` = '$date',
      `email` = '$email',`reason` = '$reason' WHERE `appointment`.`id` = '$idd'";
 

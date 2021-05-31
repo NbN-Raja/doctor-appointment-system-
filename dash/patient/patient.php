@@ -30,14 +30,15 @@ li{
             <!--  Side nav bar php -->
 <style>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #17a2b8;
-  width: 699%;
-    height: 80px;
-}
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:#47c128;
+        width: 699%;
+        height: 80px;
+      }
+li {
 
 li {
   float: left;
@@ -61,12 +62,13 @@ li a:hover {
 
 
 <ul>
-<h1 style="margin-top:30px; font-size: 35px;"> <b>  Admin Dashboard  </b></h1>
-<p style="position: absolute;top: 13px;left: 500%;text-align: right;width: 79px;margin-top:31px"> <b>  <a href="../admin/admin-dash.php"> Admin </a></b>  </p>
-<p style="position: absolute;top: 13px;left: 540%;text-align: right;width: 79px;margin-top:31px; background-color:red;"> <b> <a href="patient-dash.php">  Patients  </a>  </b>  </p>
-<p style="position: absolute;top: 13px;left: 580%;text-align: right;width: 79px;margin-top:31px"> <b> <a href="../doctors/doctor-dash.php">  Doctors  </a></b>  </p>
-</ul>
+      <h1 style="margin-top:14px; margin-left:20px; font-size: 40px; font-family:system-ui"> <b> <i class="fa fa-user" aria-hidden="true"> Patients Dashboard </i> </b></h1>
+      <button class="btn btn-info" style="position: absolute;top: -10px;left: 500%;text-align: right;width: 79px;margin-top:31px;  background-color:red;"> <a href="../admin/admin-dash.php" style="color:white;"> Admin </a></button>
+      <button class="btn btn-info" style="position: absolute;top: -10px;left: 544%;text-align: right;width: 79px;margin-top:31px;  background-color:blue;"> <a href="patient-dash.php" style="color:white;"> Patients </a></button>
+      <button class="btn btn-info" style="position: absolute;top: -10px;left: 584%;text-align: right;width: 79px;margin-top:31px;  background-color:green;"> <a href="../doctors/doctors.php" style="color:white;"> Doctors </a></button>
 
+
+    </ul>
 
 <!-- End Of nav var -->
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ID.." title="Type in a name">
@@ -98,7 +100,7 @@ $mysqli = new mysqli("localhost", "root", "", "doct");
 $sql = "SELECT * FROM users";
 if ($result = $mysqli->query($sql)) {
     if ($result->num_rows > 0) {
-        echo "<table class='black'>";
+        echo "<table class='table-sm table-striped'>";
         echo "<tr class='dark'>";
         echo "<th>id</th>";
         echo "<th>name</th>";
@@ -154,32 +156,20 @@ li{
     margin-bottom: 12px;
     position: relative;
     top: -60px;
-    right: -333px;
+    right: -419px;
+    border-radius: 11px;
 }
 
 table{
     border:1px solid white;
     position:relative;
     border-collapse: collapse;
-    background-color:#47474842;
     width:60%;
     position:relative;
     bottom:650px;
     left:300px;
 }
 
-th{
-  background-color: #17a2b8;
-}
-
-th, td {
-  text-align: CENTER;
-  padding: 0.3rem;
-
-}
-td{
-    border:1px solid white;
-}
 
 
 

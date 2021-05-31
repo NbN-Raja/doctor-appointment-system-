@@ -49,10 +49,10 @@ $mysqli = new mysqli("localhost", "root", "", "doct");
 $sql = "SELECT * FROM emergency";
 if ($result = $mysqli->query($sql)) {
     if ($result->num_rows > 0) {
-        echo "<table>";
+        echo "<table class='table-sm table-striped'>";
         echo "<tr>";
         echo "<th>id</th>";
-        echo "<thfirstname</th>";
+        echo "<th>name</th>";
         echo "<th>phone</th>";
         echo "<th>address</th>";
         echo "</tr>";
@@ -89,37 +89,25 @@ table{
     top: 150px;
     border:1px solid white;
     position:relative;
-    border-collapse: collapse;
-    background-color:#47474842;
     width:85%;
     left: -345px;
 }
 
 #myInput {
-        background-image: url(/css/searchicon.png);
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 54%;
-    font-size: 16px;
-    height: 41px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-    position: relative;
-    top: 24px;
-    right: -86px; /* Add some space below the input */
-}
-th{
-  background-color: #17a2b8;
+  background-image: url(img/search.png);
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 41%;
+            font-size: 16px;
+            height: 41px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            position: relative;
+            top: 19px;
+            right: -151px;
+            border-radius: 12px;
 }
 
-th, td {
-  text-align: CENTER;
-  padding: 0.3rem;
-
-}
-td{
-    border:1px solid white;
-}
     </style>
 
 </body>

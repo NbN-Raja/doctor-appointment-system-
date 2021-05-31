@@ -20,6 +20,7 @@ li{
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
+
   </head>
   <body>
 
@@ -49,7 +50,7 @@ $mysqli = new mysqli("localhost", "root", "", "doct");
 $sql = "SELECT * FROM feedback";
 if ($result = $mysqli->query($sql)) {
     if ($result->num_rows > 0) {
-        echo "<table>";
+        echo "<table class='table table-striped'>";
         echo "<tr>";
         echo "<th>id</th>";
         echo "<th>firstname</th>";
@@ -93,38 +94,27 @@ table{
     top: 150px;
     border:1px solid white;
     position:relative;
-    border-collapse: collapse;
-    background-color:#47474842;
-    width:85%;
+    width:55%;
     left: -345px;
 }
 
 #myInput {
-        background-image: url(/css/searchicon.png);
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 54%;
-    font-size: 16px;
-    height: 41px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-    position: relative;
-    top: 24px;
-    right: -86px; /* Add some space below the input */
-}
-th{
-  background-color: #17a2b8;
+  background-image: url(img/search.png);
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 41%;
+            font-size: 16px;
+            height: 41px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+            position: relative;
+            top: 19px;
+            right: -151px;
+            border-radius: 12px;
 }
 
-th, td {
-  text-align: CENTER;
-  padding: 0.3rem;
 
-}
-td{
-    border:1px solid white;
-}
-    </style>
+ </style>
 
 </body>
 </html>

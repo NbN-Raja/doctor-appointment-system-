@@ -136,11 +136,14 @@ include 'navbar.php';
 
     <!-- ################# Footer Starts Here#######################--->
 
+
     <?php
 
-include '../front/footer.php';
+include 'footer.php';
 
 ?>
+
+
 
 </body>
 
