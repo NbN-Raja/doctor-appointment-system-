@@ -60,6 +60,7 @@ VALUES( '$firstname', '$gender', '$dob', '$age', '$blood', '$address', '$phone',
   <?php
 
 ?>
+<link rel="shortcut icon" href="assets/images/fav.jpg" />
   <link rel="shortcut icon" href="front/assets/images/fav.jpg" />
   <link rel="stylesheet" href="front/assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="front/assets/css/fontawsom-all.min.css" />
@@ -306,13 +307,17 @@ include 'navbar.php';
                 <!--  Make Appoinment -->
 
                 <div class="" style="margin-top: 10%;">
-                  <input type="submit" name="submit">
+                  <input type="submit" onclick="clickAlert()" name="submit">
                 </div>
 
       </div>
       <!-- Billing Address -->
 
-
+<script>
+ function clickAlert() {
+    alert("Form Submitted!");
+}
+</script>
 
 
     </div>

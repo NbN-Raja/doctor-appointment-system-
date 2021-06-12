@@ -205,7 +205,7 @@ echo $show;
                   </div>
                   <div class="form-group">
                     <label> Doctor Timing</label>
-                    <input type="password" name="time" class="form-control" auto-complete="off" placeholder="">
+                    <input type="number" name="time" class="form-control" auto-complete="off" placeholder="">
                   </div>
 
 
@@ -213,7 +213,7 @@ echo $show;
 
                   <div class="form-group">
                     <label> Doctors Room </label>
-                    <input type="password" name="room" class="form-control" auto-complete="off"
+                    <input type="number" name="room" class="form-control" auto-complete="off"
                       placeholder="Doctors Room">
                   </div>
 

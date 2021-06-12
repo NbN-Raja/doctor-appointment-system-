@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <p style="padding:10px"> Bakulahar Chowk</p>
+<p style="padding:10px; text-align:center"> This is only demo of  project-I|| Feel Free To Give Us Honest Review</p>
     <!-- ################# Header Starts Here#######################--->
     <?php
 include 'navbar.php';

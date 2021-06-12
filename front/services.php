@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Free Medical Hospital Website Template | Smarteyeapps.com</title>
+    <title> Services</title>
 
     <link rel="shortcut icon" href="assets/images/fav.jpg">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -84,7 +84,7 @@ include 'navbar.php';
                     <div class="single-key">
                         <i class="fas fa-prescription-bottle-alt"></i>
                         <h5>pharmesi</h5>
-                        <p>All Types of information about medicine are located in ratnanagar hospital.</p>
+                        <p>All Types of information about medicine are located in ratnnagar hospital.</p>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@ include 'navbar.php';
                     <div class="single-key">
                         <i class="far fa-thumbs-up"></i>
                         <h5>High Quality treatments</h5>
-                        <p>High Quality of  treatment  .</p>
+                        <p>High Quality of treatemnt  .</p>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,18 @@ include 'navbar.php';
 
     </section>
 
+
+
+
+
+
+
+
+
+
+
     <!-- ################# Footer Starts Here#######################--->
+
     <?php
 
 include 'footer.php';
@@ -117,10 +128,10 @@ include 'footer.php';
 
 
 
-
     </footer>
     <div class="copy">
             <div class="container">
+
 
 
             </div>

@@ -12,18 +12,18 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3 col-sm-12 nav-img">
-      <!-- <img src="assets/images/lo.png" alt="" /> -->
+    <li style="color:red; margin-top: 27px; font-size: 21px;font-weight: 900">Login/Sign Up Navbar</li>
       <a data-toggle="collapse" data-target="#menu" href="#menu"
         ><i class="fas d-block d-md-none small-menu fa-bars"></i
       ></a>
     </div>
     <div id="menu" class="col-md-9 d-none d-md-block nav-item">
       <ul>
-        <li><a href="../front/index.php">Back to home</a></li>
-        <li><a href="doctor.php">Doctors</a></li>
-        <li><a href="../patient.php">Patient <br> Information</a></li>
-        <li><a href="../admin/admin-login.php">admin</a></li>
-        <li><a href="../appointment/appointments.php">Appoinment Form</a></li>
+
+
+        <li><a href="../front/index.php">Home</a></li>
+        <li><a href="register.php">Register </a></li>
+        <li><a href="login.php">Login </a></li>
 
       </ul>
     </div>

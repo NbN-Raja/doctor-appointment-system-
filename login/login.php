@@ -84,34 +84,26 @@ if (isset($_POST['submit'])) {
 
 	</head>
 
+<?php include 'nav-bar.php'?>
 
-  <nav>
 
-  </nav>
 	<body class="account-page">
-
 		<!-- Main Wrapper -->
 		<div class="main-wrapper">
-
 			<!-- Header -->
 			<header class="header">
-
 			</header>
 			<!-- /Header -->
-
 			<!-- Page Content -->
 			<div class="content">
 				<div class="container-fluid">
-
 					<div class="row">
 						<div class="col-md-8 offset-md-2">
-
 							<!-- Login Tab Content -->
 							<div class="account-content">
 								<div class="row align-items-center justify-content-center">
 									<div class="col-md-7 col-lg-6 login-left">
-										<img src="login-banner.png" class="img-fluid" alt="Doccure Login" style="    position: relative;
-    top: 82px;">
+										<img src="login-banner.png" class="img-fluid" alt="Doccure Login" style="    position: relative; top: 82px;">
 									</div>
 									<div class="col-md-12 col-lg-6 login-right" style="top:100px">
 										<div class="login-header">
@@ -119,11 +111,10 @@ if (isset($_POST['submit'])) {
 										</div>
 										<form action="login.php" method="POST">
 											<div class="form-group form-focus">
-												<input type="text"  name="username" class="form-control floating" placeholder="email">
-
+												<input type="text"  name="username" class="form-control floating" placeholder="Enter Username">
 											</div>
 											<div class="form-group form-focus">
-												<input type="password" name="password" class="form-control floating" placeholder="password">
+												<input type="password" name="password" class="form-control floating" placeholder=" Enter password">
 
 											</div>
 											<div class="text-right">
@@ -134,7 +125,6 @@ if (isset($_POST['submit'])) {
 												<span class="or-line"></span>
 												<span class="span-or">or</span>
 											</div>
-
 											<div class="text-center dont-have">Don’t have an account? <a href="register.php">Register</a></div>
 										</form>
 									</div>
@@ -144,9 +134,7 @@ if (isset($_POST['submit'])) {
 
 						</div>
 					</div>
-
 				</div>
-
 			</div>
 			<!-- /Page Content -->
 
